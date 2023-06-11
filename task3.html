@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 3</title>
+    <style>
+      body {
+        background-color: lightgray;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+      }
+      .header {
+        max-width: 1425px;
+        margin: 0 auto;
+        background-color: burlywood;
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        font-size: 30px;
+      }
+      .content {
+        max-width: 600px;
+        margin: 10px auto;
+        background-color: burlywood;
+        border-radius: 10px;
+        text-align: center;
+        padding: 5px 0;
+      }
+      .btn {
+        max-width: 300px;
+        margin: 30px auto;
+      }
+      .button {
+        display: block;
+        text-decoration: none;
+        color: black;
+        background-color: green;
+        margin: 15px 25px;
+        text-align: center;
+        font-size: 22px;
+        padding: 10px 20px;
+        border-radius: 7px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">Задача 3</div>
+    <div class="content">
+      <p>Відповідь до задачі:</p>
+      <script>
+        const minNumber = 1;
+        const maxNumber = 5;
+        let randomNumber =
+          minNumber + Math.floor(Math.random() * (maxNumber - minNumber + 1));
+
+        let enterNumber = parseInt(prompt('Введіть число від 1 до 5'));
+
+        if (enterNumber !== randomNumber) {
+          alert('Ви не вгадали, спробуйте ще раз');
+          enterNumber = parseInt(prompt('Введіть число від 1 до 5'));
+          if (enterNumber !== randomNumber) {
+            alert('Ви не вгадали');
+            document.write('Ви невгадали число');
+          } else {
+            document.write('Ура! Ви вгадали число');
+          }
+        } else document.write('Ура! Ви вгадали число');
+      </script>
+    </div>
+    <div class="btn">
+      <a class="button" href="./index.html">На головну</a>
+    </div>
+  </body>
+</html>
